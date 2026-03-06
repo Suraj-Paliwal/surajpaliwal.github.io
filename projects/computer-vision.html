@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Computer Vision Object Detection — Suraj Paliwal</title>
+  <meta name="description" content="Real-time object detection and segmentation system using YOLOv8 for edge deployment — by Suraj Paliwal.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+<header class="nav" id="nav">
+  <div class="container nav-container">
+    <a href="../index.html" class="nav-logo">SP</a>
+    <nav role="navigation" aria-label="Main navigation">
+      <ul class="nav-links" id="nav-links">
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="../about.html">About</a></li>
+        <li><a href="../projects.html">Projects</a></li>
+        <li><a href="../research.html">Research</a></li>
+        <li><a href="../publications.html">Publications</a></li>
+        <li><a href="../blog.html">Blog</a></li>
+        <li><a href="../contact.html" class="nav-cta">Contact</a></li>
+      </ul>
+      <button class="hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="project-detail-hero">
+    <div class="container">
+      <a href="../projects.html" class="back-link">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m12 19-7-7 7-7"/><path d="M19 12H5"/></svg>
+        Back to Projects
+      </a>
+
+      <div class="tags" style="margin-bottom:1rem;">
+        <span class="tag tag-cyan">Computer Vision</span>
+        <span class="tag">Research Project</span>
+        <span class="tag">2024</span>
+      </div>
+
+      <h1>Real-Time Object Detection System</h1>
+      <p style="font-size:1.125rem;color:var(--tx-muted);max-width:60ch;margin-top:0.75rem;">
+        High-performance object detection and semantic segmentation pipeline using YOLOv8,
+        optimized for real-time edge inference on resource-constrained hardware.
+      </p>
+
+      <div class="project-meta-row">
+        <div class="project-meta-item">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+          2024
+        </div>
+        <div class="project-meta-item">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+          PyTorch, YOLOv8, OpenCV, ONNX
+        </div>
+        <div class="project-meta-item">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0 1 12 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z"/></svg>
+          <a href="https://github.com/surajpaliwal" target="_blank" rel="noopener" style="color:var(--tx-muted);">View on GitHub</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="project-content">
+
+        <h2>Overview</h2>
+        <p>
+          This project develops a complete computer vision pipeline for real-time
+          object detection and instance segmentation, with a primary focus on
+          <strong>edge deployment</strong>. The system is built on YOLOv8 and includes
+          a complete optimization pipeline: training on custom datasets, knowledge
+          distillation for model compression, ONNX export, and INT8 quantization
+          for embedded inference.
+        </p>
+        <p>
+          The motivating application is assistive robotics — robots need to quickly
+          and accurately perceive their environment on hardware without discrete GPUs.
+          This system achieves real-time performance (&gt;30 FPS) on NVIDIA Jetson Nano
+          and 12 FPS on Raspberry Pi 5.
+        </p>
+
+        <h2>Key Features</h2>
+        <div class="feature-grid">
+          <div class="feature-card">
+            <span class="feature-emoji">&#128065;</span>
+            <h4>Multi-Task Detection</h4>
+            <p>Simultaneous object detection, instance segmentation, and pose estimation in a single forward pass.</p>
+          </div>
+          <div class="feature-card">
+            <span class="feature-emoji">&#9889;</span>
+            <h4>Edge Optimization</h4>
+            <p>ONNX export with TensorRT and ONNX Runtime acceleration. INT8 quantization with calibration dataset.</p>
+          </div>
+          <div class="feature-card">
+            <span class="feature-emoji">&#128218;</span>
+            <h4>Custom Training</h4>
+            <p>Fine-tuning pipeline with data augmentation, mosaic, and mix-up on custom annotated datasets.</p>
+          </div>
+          <div class="feature-card">
+            <span class="feature-emoji">&#128202;</span>
+            <h4>Evaluation Suite</h4>
+            <p>Comprehensive benchmarking: mAP@50, mAP@50-95, FPS across hardware platforms, memory profiling.</p>
+          </div>
+        </div>
+
+        <h2>Technical Pipeline</h2>
+        <ol>
+          <li><strong>Data Collection &amp; Annotation</strong> — Custom dataset of 8,500 images annotated with Roboflow across 12 object categories relevant to robotics environments.</li>
+          <li><strong>Model Training</strong> — YOLOv8-m fine-tuned with cosine LR schedule, mosaic augmentation, and multi-scale training on a single A100 GPU (40GB).</li>
+          <li><strong>Knowledge Distillation</strong> — YOLOv8-m teacher → YOLOv8-n student distillation using response-based KD, recovering 94% of teacher accuracy at 4× smaller model size.</li>
+          <li><strong>Quantization</strong> — Post-training INT8 quantization using 200-image calibration set. 2.3× inference speedup with &lt;1.5% mAP loss.</li>
+          <li><strong>Deployment</strong> — ONNX Runtime deployment with hardware-specific execution providers (CUDA, TensorRT, NNAPI, CoreML).</li>
+        </ol>
+
+        <h2>Tech Stack</h2>
+        <div class="tags" style="margin-bottom:2rem;">
+          <span class="tag tag-blue">Python 3.11</span>
+          <span class="tag tag-blue">PyTorch 2.x</span>
+          <span class="tag tag-cyan">Ultralytics YOLOv8</span>
+          <span class="tag tag-cyan">OpenCV</span>
+          <span class="tag tag-cyan">ONNX Runtime</span>
+          <span class="tag tag-green">TensorRT</span>
+          <span class="tag tag-green">CUDA 12</span>
+          <span class="tag">Roboflow</span>
+          <span class="tag">NumPy</span>
+        </div>
+
+        <h2>Benchmark Results</h2>
+        <div class="info-box" style="margin-bottom:1rem;">
+          Evaluated on custom robotics perception dataset (2,000 test images, 12 classes).
+        </div>
+        <ul>
+          <li><strong>YOLOv8-m (FP32, GPU):</strong> mAP@50 = 87.2%, 94 FPS on A100</li>
+          <li><strong>YOLOv8-n distilled (INT8, Jetson Nano):</strong> mAP@50 = 82.4%, 31 FPS</li>
+          <li><strong>YOLOv8-n distilled (INT8, RPi 5):</strong> mAP@50 = 82.4%, 12 FPS</li>
+          <li><strong>Model size reduction:</strong> 25.9 MB → 3.2 MB (8× smaller)</li>
+        </ul>
+
+      </div>
+
+      <div style="margin-top:3rem;display:flex;gap:1rem;flex-wrap:wrap;">
+        <a href="https://github.com/surajpaliwal" target="_blank" rel="noopener" class="btn btn-primary">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0 1 12 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z"/></svg>
+          View on GitHub
+        </a>
+        <a href="../publications.html" class="btn btn-outline">Related Paper</a>
+        <a href="../projects.html" class="btn btn-ghost">All Projects</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="container footer-inner">
+    <div>
+      <span class="footer-brand">Suraj Paliwal</span>
+      <p>&copy; <span id="current-year">2025</span> Suraj Paliwal. All rights reserved.</p>
+    </div>
+    <div class="footer-links">
+      <a href="../about.html">About</a>
+      <a href="../research.html">Research</a>
+      <a href="../projects.html">Projects</a>
+      <a href="../contact.html">Contact</a>
+    </div>
+    <div class="footer-socials">
+      <a href="https://github.com/surajpaliwal" target="_blank" rel="noopener" class="footer-social-btn" aria-label="GitHub">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0 1 12 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z"/></svg>
+      </a>
+    </div>
+  </div>
+</footer>
+
+<script src="../js/main.js"></script>
+</body>
+</html>
